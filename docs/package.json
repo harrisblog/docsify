@@ -1,0 +1,29 @@
+{
+  "devDependencies": {
+    "docsify-cli": "^4.4.3",
+    "now": "^21.0.1"
+  },
+  "name": "my-project",
+  "scripts": {
+    "start": "docsify start . -c ssr.config.js",
+    "deploy": "now -p"
+  },
+  "files": [
+    "docs"
+  ],
+  "docsify": {
+    "config": {
+      "basePath": "https://doc.hassanwong.top/",
+      "loadSidebar": true,
+      "loadNavbar": true,
+      "coverpage": true,
+      "name": "docsify"
+    }
+  },
+  "module.exports": {
+    "template": "./ssr.html",
+    "maxAge": "60 * 60 * 1000", 
+    "config": {
+    }
+  }
+}

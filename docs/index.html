@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- mermaid -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
+</head>
+
+<body>
+  <nav>
+    <a href="">关于</a>
+  </nav>
+  <div id="app"></div>
+  <script>
+    // mermaid
+    var num = 0;
+    mermaid.initialize({ startOnLoad: false });
+
+    window.$docsify = {
+      name: '诗颂的文档',
+      repo: '',
+      loadSidebar: true,
+      subMaxLevel: 2,
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      loadNavbar: true,
+      coverpage: true,
+      onlyCover: false,
+
+      //全文搜索
+      search: {
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+        paths: 'auto',
+        placeholder: '搜索',
+        noData: '找不到结果',
+        // 搜索标题的最大程级, 1 - 6
+        depth: 6,
+      },
+
+      // 字数统计
+      count: {
+        countable: true,
+        fontsize: '16px',
+        color: 'rgb(90,90,90)',
+        language: 'chinese'
+      },
+
+      // GitHub在线文档编辑
+      plugins: [
+        EditOnGithubPlugin.create('https://github.com/hassanblog/docsify/blob/main/docs/', null, function (file) {
+          if (file.indexOf('en') === -1) {
+            return '在线编辑此文档'
+          } else {
+            return 'Edit on GitHub'
+          }
+        }),
+
+        // Footer
+        function (hook) {
+          var footer = [
+            '<hr/>',
+            '<footer>',
+            '<span><a href="https://github.com/hassanblog">Hassan Wong</a> Since 2021</span>',
+            '<span>Proudly published with <a href="https://github.com/hassanblog/docsify" target="_blank">docsify</a>.</span>',
+            '</footer>'
+          ].join('');
+
+          hook.afterEach(function (html) {
+            return html + footer;
+          });
+        },
+
+        // 文档编辑
+        function (hook, vm) {
+          hook.beforeEach(function (html) {
+            var url =
+              'https://github.com/hassanblog/docsify/blob/main/docs/' +
+              vm.route.file;
+            var editHtml = '[📝 Edit Document](' + url + ')\n';
+
+            return (
+              editHtml +
+              html +
+              '\n----\n' +
+              'Last modified {docsify-updated} ' +
+              editHtml
+            );
+          });
+        }
+      ],
+
+      // mermaid
+      markdown: {
+        renderer: {
+          code: function (code, lang) {
+            if (lang === "mermaid") {
+              return (
+                '<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
+              );
+            }
+            return this.origin.code.apply(this, arguments);
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- 离线模式注册 - PWA -->
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
+  </script>
+
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- 全文搜索 - IE11 旧版浏览器忽略双音符 -->
+  <script src="//polyfill.io/v3/polyfill.min.js?features=String.prototype.normalize"></script>
+  <!-- 外链脚本 - External Script -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+  <!-- 图片缩放 - Zoom image -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- GitHub在线文档编辑 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+  <!-- 复制到剪贴板 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <!-- 字数统计 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <!-- mermaid -->
+  <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <!-- 代码高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+</body>
+
+</html>
