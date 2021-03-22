@@ -1,38 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+https://cdn.jsdelivr.net/gh/hassanblog/docsify/docs/media/favicon.png
 
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>诗颂的文档</title>
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/hassanblog/docsify/docs/media/favicon.png" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
+  <meta name="keywords"
+    content="doc,docs,documentation,gitbook,creator,generator,github,jekyll,github-pages,诗颂的文档,hassan's blog,hassanwong" />
+  <meta name="description" content="A magical documentation generator." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <!-- mermaid -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
+  <!-- Font Awesome Free 5.15.2 -->
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav>
-    <a href="">关于</a>
-  </nav>
   <div id="app"></div>
   <script>
-    // mermaid
-    var num = 0;
-    mermaid.initialize({ startOnLoad: false });
-
     window.$docsify = {
+      // 左上角文档标题
       name: '诗颂的文档',
-      repo: '',
-      loadSidebar: true,
-      subMaxLevel: 2,
+      nameLink: '/',
+
+      // 右上角三角标
+      repo: 'https://github.com/hassanblog/docsify/',
+
       alias: {
-        '/.*/_sidebar.md': '/_sidebar.md'
+        '/.*/sidebar.md': '/sidebar.md'
       },
+      maxLevel: 4,
+
+      // 导航
       loadNavbar: true,
+      loadNavbar: 'navbar.md',
+
+      // 侧边栏
+      loadSidebar: true,
+      loadSidebar: 'sidebar.md',
+
+      autoHeader: true,
+
+      // 切换新页面自动跳转到页面顶部
+      auto2top: true,
+
+      // 侧边栏生成目录的层级
+      subMaxLevel: 2,
+
+      // 外部链接是否打开新页面
+      externalLinkTarget: '_blank',
+
+      // 启用相对路径
+      relativePath: true,
+
+      // 封面
       coverpage: true,
+      coverpage: 'coverpage.md',
       onlyCover: false,
+
+      // 主题色
+      themeColor: '#81D8CF',
+
+      logo: 'https://cdn.jsdelivr.net/gh/hassanblog/docsify/docs/media/favicon.png',
+
+
+      // 小屏设备下合并导航栏到侧边栏。
+      mergeNavbar: true,
+
+      // 在找不到指定页面时加载404.md
+      notFoundPage: true,
+      // 加载自定义404页面
+      notFoundPage: '404.md',
+      topMargin: 90, // default: 0
 
       //全文搜索
       search: {
@@ -50,72 +92,7 @@
         fontsize: '16px',
         color: 'rgb(90,90,90)',
         language: 'chinese'
-      },
-
-      // GitHub在线文档编辑
-      plugins: [
-        EditOnGithubPlugin.create('https://github.com/hassanblog/docsify/blob/main/docs/', null, function (file) {
-          if (file.indexOf('en') === -1) {
-            return '在线编辑此文档'
-          } else {
-            return 'Edit on GitHub'
-          }
-        }),
-
-        // Footer
-        function (hook) {
-          var footer = [
-            '<hr/>',
-            '<footer>',
-            '<span><a href="https://github.com/hassanblog">Hassan Wong</a> Since 2021</span>',
-            '<span>Proudly published with <a href="https://github.com/hassanblog/docsify" target="_blank">docsify</a>.</span>',
-            '</footer>'
-          ].join('');
-
-          hook.afterEach(function (html) {
-            return html + footer;
-          });
-        },
-
-        // 文档编辑
-        function (hook, vm) {
-          hook.beforeEach(function (html) {
-            var url =
-              'https://github.com/hassanblog/docsify/blob/main/docs/' +
-              vm.route.file;
-            var editHtml = '[📝 Edit Document](' + url + ')\n';
-
-            return (
-              editHtml +
-              html +
-              '\n----\n' +
-              'Last modified {docsify-updated} ' +
-              editHtml
-            );
-          });
-        }
-      ],
-
-      // mermaid
-      markdown: {
-        renderer: {
-          code: function (code, lang) {
-            if (lang === "mermaid") {
-              return (
-                '<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
-              );
-            }
-            return this.origin.code.apply(this, arguments);
-          }
-        }
       }
-    }
-  </script>
-
-  <!-- 离线模式注册 - PWA -->
-  <script>
-    if (typeof navigator.serviceWorker !== 'undefined') {
-      navigator.serviceWorker.register('sw.js')
     }
   </script>
 
@@ -123,21 +100,14 @@
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <!-- 全文搜索 - IE11 旧版浏览器忽略双音符 -->
   <script src="//polyfill.io/v3/polyfill.min.js?features=String.prototype.normalize"></script>
-  <!-- 外链脚本 - External Script -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
   <!-- 图片缩放 - Zoom image -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-  <!-- GitHub在线文档编辑 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
   <!-- 复制到剪贴板 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
   <!-- 字数统计 -->
   <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
-  <!-- mermaid -->
-  <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-  <!-- 代码高亮 -->
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+  <!-- 全文搜索 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 </body>
 
 </html>
