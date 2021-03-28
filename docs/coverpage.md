@@ -2,11 +2,11 @@
 
 ![logo](https://cdn.jsdelivr.net/gh/hassanblog/docsify/docs/media/favicon.png)
 
-# docsify <small>**4.12.1**</small>
+# Hassan's Document
 
-## Changed By&nbsp; [HassanWong](https://hassanwong.top)
+## docsify <small>**4.12.1**</small>
 
-> 用文档的方式来记录篇幅较大、层级较多的笔记
+<br>
 
 [GitHub](https://github.com/hassanblog/docsify/) [Get Started!](/readme)
 
