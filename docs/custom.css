@@ -67,29 +67,28 @@ body {
 .markdown-section h6 span {
   font-weight: bold !important;
 }
+.markdown-section h1 span {
+  font-size: 38px;
+}
 .markdown-section h2 span {
-  font-size: 36px;
+  font-size: 34px;
 }
 .markdown-section h3 span {
-  font-size: 32px;
+  font-size: 30px;
 }
 .markdown-section h4 span {
-  font-size: 28px;
-}
-.markdown-section h4 span {
-  font-size: 24px;
+  font-size: 26px;
 }
 .markdown-section h5 span {
-  font-size: 20px;
+  font-size: 22px;
 }
 .markdown-section h6 span {
-  font-size: 20;
+  font-size: 22px;
   color: #666;
 }
 h1,
 h2 {
   border-bottom: solid 2px #ddd;
-  /* text-decoration: none !important; */
 }
 h4 {
   margin-bottom: 23px;
@@ -211,12 +210,27 @@ h1.app-name {
 .app-nav ul {
   padding-left: 0;
 }
-/* 代码框 */
+
+/* 代码块 */
 pre {
-  padding: 10px !important;
+  padding: 0 !important;
 }
-code {
-  padding: 10px !important;
+.markdown-section pre > code {
+  color: #525252;
+  padding: 10px 15px;
+  line-height: inherit;
+  margin: 0;
+  max-width: inherit;
+  overflow: inherit;
+  white-space: inherit;
+}
+/* 代码框 */
+.markdown-section code {
+  border-radius: 6px;
+  background-color: #eee;
+  padding: 0 2px;
+  margin: auto 3px;
+  box-shadow: 0 1px 3px 0px rgba(10, 10, 10, 0.3);
 }
 
 /* 鼠标图标 -----------------------------------------------------------------------开始 */
@@ -243,3 +257,49 @@ input#txt {
     pointer !important;
 }
 /* 鼠标图标 -----------------------------------------------------------------------结束 */
+
+/* 移动端 -------------------------------------- 开始 */
+/* 左右边距 */
+@media screen and (max-width: 960px) {
+  .markdown-section {
+    max-width: 100%;
+  }
+  .markdown-section h1 span {
+    font-size: 34px;
+  }
+  .markdown-section h2 span {
+    font-size: 30px;
+  }
+  .markdown-section h3 span {
+    font-size: 26px;
+  }
+  .markdown-section h4 span {
+    font-size: 22px;
+  }
+  .markdown-section h5 span {
+    font-size: 18px;
+  }
+  .markdown-section h6 span {
+    font-size: 18px;
+  }
+  /* 文章 */
+  .markdown-section p,
+  .markdown-section ol li,
+  .markdown-section ul li,
+  table {
+    font-size: 15px !important;
+  }
+  /* p行间距 */
+  .markdown-section p {
+    margin: 5px auto;
+  }
+  /* 隐藏导航栏 */
+  .app-nav.no-badge {
+    visibility: hidden;
+  }
+  /* 搜索 */
+  .search {
+    margin: 0 auto 9px !important;
+  }
+}
+/* 移动端 -------------------------------------- 结束 */
