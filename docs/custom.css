@@ -1,16 +1,20 @@
 /* 滚动条 -------------------------------------------开始 */
 ::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
+  width: 11px !important;
+  height: 12px !important;
+}
+aside.sidebar::-webkit-scrollbar {
+  width: 8px !important;
+  height: 12px !important;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgb(136, 98, 225, 0.5);
-  border-radius: 2em;
+  background-color: rgb(136, 98, 225, 0.5) !important;
+  border-radius: 2em !important;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #81d8cf;
+  background-color: #81d8cf !important;
   background-image: -webkit-linear-gradient(
     45deg,
     rgba(255, 255, 255, 0.4) 25%,
@@ -20,8 +24,8 @@
     rgba(255, 255, 255, 0.4) 75%,
     transparent 75%,
     transparent
-  );
-  border-radius: 2em;
+  ) !important;
+  border-radius: 2em !important;
 }
 
 ::-webkit-scrollbar-corner {
@@ -30,20 +34,83 @@
 
 ::-moz-selection {
   color: #fff;
-  background-color: #81d8cf;
+  background-color: #81d8cf !important;
 }
 /* 滚动条 -------------------------------------- 结束 */
 
+/* 全局 */
 * {
-  font-family: "PingFang SC";
+  font-family: "PingFang SC" !important;
+  letter-spacing: 1px !important;
 }
-.markdown-section p {
-  font-size: 18px !important;
+body {
+  background-color: #f3fcfb;
 }
 
-/* 底标 */
-footer {
-  font-size: 16px !important;
+/* 封面标题 */
+.cover-main h1,
+.cover-main h2 {
+  border-bottom: none;
+  margin: 20px auto !important;
+}
+.cover-main h1 a,
+.cover-main h2 a {
+  font-weight: bold;
+}
+
+/* 标题 */
+.markdown-section h1 span,
+.markdown-section h2 span,
+.markdown-section h3 span,
+.markdown-section h4 span,
+.markdown-section h5 span,
+.markdown-section h6 span {
+  font-weight: bold !important;
+}
+.markdown-section h2 span {
+  font-size: 36px;
+}
+.markdown-section h3 span {
+  font-size: 32px;
+}
+.markdown-section h4 span {
+  font-size: 28px;
+}
+.markdown-section h4 span {
+  font-size: 24px;
+}
+.markdown-section h5 span {
+  font-size: 20px;
+}
+.markdown-section h6 span {
+  font-size: 20;
+  color: #666;
+}
+h1,
+h2 {
+  border-bottom: solid 2px #ddd;
+  /* text-decoration: none !important; */
+}
+h4 {
+  margin-bottom: 23px;
+}
+h6 {
+  margin-bottom: 26px;
+}
+h1 a::after {
+  text-decoration: none;
+}
+
+/* 文章 */
+.markdown-section p,
+.markdown-section ol li,
+.markdown-section ul li,
+table {
+  font-size: 17px !important;
+}
+.markdown-section figure,
+.markdown-section p {
+  margin: 10px 0;
 }
 
 /* 图片 */
@@ -52,8 +119,19 @@ img.medium-zoom-image {
 }
 
 /* 引用块 */
-blockquote {
+.markdown-section blockquote {
   background-color: #ddf4f2;
+  margin: 20px 0 !important;
+  padding: 0 10px;
+}
+.markdown-section blockquote p {
+  font-weight: normal;
+  padding: 10px 0;
+}
+
+/* 加粗 - 按照当前字体颜色 */
+strong {
+  color: unset !important;
 }
 
 /* 下划线 */
@@ -68,7 +146,100 @@ u {
 .sidebar ul li a {
   font-size: 16px;
 }
+.sidebar-nav ul li {
+  font-weight: bold;
+  font-size: 18px;
+}
+.sidebar ul li.active > a {
+  border: none;
+}
+aside.sidebar {
+  background-color: #f8f8f8 !important;
+}
+/* 左侧栏切换 */
+.sidebar-toggle {
+  background-color: rgba(255, 255, 255, 0);
+}
 
+/* 链接 */
 .markdown-section a {
   text-decoration: none;
+  font-weight: normal;
 }
+.sidebar ul li a:hover {
+  color: #81d8cf;
+  text-decoration: none;
+}
+
+/* 表格 */
+.markdown-section td,
+.markdown-section th {
+  text-align: left;
+}
+.markdown-section thead tr {
+  background-color: #b3e7e2;
+}
+
+/* 搜索 */
+.search {
+  margin: 48px auto 9px !important;
+}
+
+/* Logo */
+h1.app-name {
+  border-bottom: 1px solid #ddd;
+}
+
+/* 右上角导航栏 */
+.app-nav.no-badge {
+  width: 100%;
+  margin: 0;
+  position: fixed;
+  text-align: center;
+  backdrop-filter: saturate(160%) blur(10px);
+  z-index: 10;
+  background-color: rgb(129, 216, 207, 0.2);
+}
+.app-nav ul li a {
+  font-size: 18px;
+  font-weight: bold;
+}
+.app-nav ul li {
+  height: 40px;
+  margin-top: 8px;
+}
+.app-nav ul {
+  padding-left: 0;
+}
+/* 代码框 */
+pre {
+  padding: 10px !important;
+}
+code {
+  padding: 10px !important;
+}
+
+/* 鼠标图标 -----------------------------------------------------------------------开始 */
+body {
+  cursor: url(https://cdn.jsdelivr.net/gh/hassanblog/CDN/img/cursor.png),
+    default !important;
+}
+
+/*i标签，a标签，按钮，头部的导航栏，网址卡片，底栏链接*/
+i:hover,
+a:hover,
+button:hover,
+#nav .site-page:hover,
+.xe-widget.xe-conversations.box2.label-info {
+  cursor: url(https://cdn.jsdelivr.net/gh/hassanblog/CDN/img/cursor_puppy.png),
+    pointer !important;
+}
+
+/*页脚a标签，分页器，搜索框*/
+#footer-wrap a:hover,
+#pagination .page-number:hover,
+input#txt {
+  cursor: url(https://cdn.jsdelivr.net/gh/hassanblog/CDN/img/cursor_stitch.png),
+    pointer !important;
+}
+/* 鼠标图标 -----------------------------------------------------------------------结束 */

@@ -62,7 +62,7 @@
       // 主题色
       themeColor: '#81D8CF',
 
-      logo: 'https://cdn.jsdelivr.net/gh/hassanblog/docsify/docs/media/favicon.png',
+      logo: '/media/Logo.png',
 
 
       // 小屏设备下合并导航栏到侧边栏。
@@ -92,6 +92,7 @@
         language: 'chinese'
       },
 
+      // footer
       plugins: [
         function (hook) {
           var footer = [
@@ -104,6 +105,25 @@
 
           hook.afterEach(function (html) {
             return html + footer;
+          });
+        }
+      ],
+      // 在GitHub上编辑
+      plugins: [
+        function (hook, vm) {
+          hook.beforeEach(function (html) {
+            var url =
+              'https://github.com/hassanblog/docsify/blob/main/docs/' +
+              vm.route.file;
+            var editHtml = '[📝 在线编辑此文档](' + url + ')\n\n';
+
+            return (
+              editHtml +
+              html +
+              '\n----\n' +
+              'Last modified {docsify-updated} ' +
+              editHtml
+            );
           });
         }
       ]
@@ -124,6 +144,11 @@
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <!-- 丝滑滚动 -->
   <script defer src="https://cdn.jsdelivr.net/gh/hassanblog/hassanblog.github.io/hassan/smooth-scrolling.js"></script>
+  <!-- 代码块高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+  <!-- 在GitHub上编辑 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
   <!-- 自定义 -->
   <script defer src="/custom.js"></script>
 </body>

@@ -1,8 +1,10 @@
 <!-- coverpage.md -->
 
-![logo](https://cdn.jsdelivr.net/gh/hassanblog/docsify/docs/media/favicon.png)
+<img src="/media/Logo.png" alt="logo" style="zoom: 50%;" />
 
-# Hassan's Document
+<br>
+
+# 诗 颂 的 文 档
 
 ## docsify <small>**4.12.1**</small>
 
