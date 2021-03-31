@@ -262,7 +262,7 @@ input#txt {
 /* 左右边距 */
 @media screen and (max-width: 960px) {
   .markdown-section {
-    max-width: 100%;
+    max-width: 96%;
   }
   .markdown-section h1 span {
     font-size: 34px;
