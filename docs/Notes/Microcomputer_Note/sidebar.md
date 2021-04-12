@@ -5,3 +5,5 @@
 - [第二章 微处理器系统结构](/Notes/Microcomputer_Note/C2.md)
 
 - [第三章 指令系统](/Notes/Microcomputer_Note/C3.md)
+
+- [第四章 汇编语言程序设计](/Notes/Microcomputer_Note/C4.md)

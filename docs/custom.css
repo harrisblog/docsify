@@ -235,7 +235,7 @@ pre {
 
 /* 鼠标图标 -----------------------------------------------------------------------开始 */
 body {
-  cursor: url(https://cdn.jsdelivr.net/gh/hassanblog/CDN/img/cursor.png),
+  cursor: url(https://cdn.jsdelivr.net/gh/hassanblog/CDN@v20210405/img/cursor.png),
     default !important;
 }
 
@@ -245,7 +245,7 @@ a:hover,
 button:hover,
 #nav .site-page:hover,
 .xe-widget.xe-conversations.box2.label-info {
-  cursor: url(https://cdn.jsdelivr.net/gh/hassanblog/CDN/img/cursor_puppy.png),
+  cursor: url(https://cdn.jsdelivr.net/gh/hassanblog/CDN@v20210405/img/cursor_puppy.png),
     pointer !important;
 }
 
@@ -253,7 +253,7 @@ button:hover,
 #footer-wrap a:hover,
 #pagination .page-number:hover,
 input#txt {
-  cursor: url(https://cdn.jsdelivr.net/gh/hassanblog/CDN/img/cursor_stitch.png),
+  cursor: url(https://cdn.jsdelivr.net/gh/hassanblog/CDN@v20210405/img/cursor_stitch.png),
     pointer !important;
 }
 /* 鼠标图标 -----------------------------------------------------------------------结束 */
