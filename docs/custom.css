@@ -36,12 +36,18 @@ aside.sidebar::-webkit-scrollbar {
   color: #fff;
   background-color: #81d8cf !important;
 }
-/* 滚动条 -------------------------------------- 结束 */
+/* 滚动条 ------------------------------------------ 结束 */
+
+@font-face {
+  font-family: "PingFang-SC"; /* 字体名自定义即可 */
+  src: url("https://cdn.jsdelivr.net/gh/hassanblog/hassanblog.github.io/fonts/PingFang-SC.otf"); /* 字体文件路径 */
+  font-display: swap;
+}
 
 /* 全局 */
 * {
-  font-family: "PingFang SC" !important;
-  letter-spacing: 1px !important;
+  font-family: "PingFang-SC" !important;
+  letter-spacing: 0.8px !important;
 }
 body {
   background-color: #f3fcfb;
@@ -58,7 +64,11 @@ body {
   font-weight: bold;
 }
 
-/* 标题 */
+.markdown-section {
+  max-width: 76%;
+}
+
+/* 文档标题 */
 .markdown-section h1 span,
 .markdown-section h2 span,
 .markdown-section h3 span,
@@ -75,12 +85,18 @@ body {
 }
 .markdown-section h3 span {
   font-size: 30px;
+  border-left: 3px solid #34495e;
+  padding: 0 0 3px 8px;
 }
 .markdown-section h4 span {
   font-size: 26px;
+  border-left: 3px solid #aaa;
+  padding: 0 0 3px 8px;
 }
 .markdown-section h5 span {
   font-size: 22px;
+  border-left: 3px dashed #aaa;
+  padding: 0 0 3px 8px;
 }
 .markdown-section h6 span {
   font-size: 22px;
@@ -96,8 +112,11 @@ h4 {
 h6 {
   margin-bottom: 26px;
 }
-h1 a::after {
+.markdown-section a:hover {
   text-decoration: none;
+}
+.markdown-section a:hover span {
+  color: #81d8cf;
 }
 
 /* 文章 */
@@ -108,8 +127,9 @@ table {
   font-size: 17px !important;
 }
 .markdown-section figure,
-.markdown-section p {
-  margin: 10px 0;
+blockquote p {
+  margin: 0;
+  padding: 10px 0;
 }
 
 /* 图片 */
@@ -122,10 +142,10 @@ img.medium-zoom-image {
   background-color: #ddf4f2;
   margin: 20px 0 !important;
   padding: 0 10px;
+  border-radius: 0 10px 10px 0;
 }
 .markdown-section blockquote p {
   font-weight: normal;
-  padding: 10px 0;
 }
 
 /* 加粗 - 按照当前字体颜色 */
@@ -197,7 +217,7 @@ h1.app-name {
   text-align: center;
   backdrop-filter: saturate(160%) blur(10px);
   z-index: 10;
-  background-color: rgb(129, 216, 207, 0.2);
+  background-color: rgb(127, 73, 133, 0.2);
 }
 .app-nav ul li a {
   font-size: 18px;
@@ -212,8 +232,9 @@ h1.app-name {
 }
 
 /* 代码块 */
-pre {
+.markdown-section pre {
   padding: 0 !important;
+  border-radius: 10px;
 }
 .markdown-section pre > code {
   color: #525252;
@@ -223,6 +244,15 @@ pre {
   max-width: inherit;
   overflow: inherit;
   white-space: inherit;
+}
+/* 复制按钮 */
+.docsify-copy-code-button {
+  border-radius: 0 0 0 10px !important;
+}
+/* 代码语言 */
+.markdown-section output:after, .markdown-section pre:after {
+  color: #aaa;
+  font-size: .8rem;
 }
 /* 代码框 */
 .markdown-section code {
@@ -260,7 +290,7 @@ input#txt {
 
 /* 移动端 -------------------------------------- 开始 */
 /* 左右边距 */
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .markdown-section {
     max-width: 96%;
   }

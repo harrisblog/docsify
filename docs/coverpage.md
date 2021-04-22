@@ -14,4 +14,4 @@
 
 <!-- 背景图片 -->
 
-![](https://www.recoluan.com/assets/img/bg.2cfdbb33.svg)
+![](media/bg.svg)
