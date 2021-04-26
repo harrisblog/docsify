@@ -5,4 +5,7 @@ https://doc.hassanwong.top/#/Notes/Microcomputer_Note/C1
 https://doc.hassanwong.top/#/Notes/Microcomputer_Note/C2
 https://doc.hassanwong.top/#/Notes/Microcomputer_Note/C3
 https://doc.hassanwong.top/#/Notes/Microcomputer_Note/C4
+https://doc.hassanwong.top/#/Notes/Data_Structure/Preface
+https://doc.hassanwong.top/#/Notes/Data_Structure/C1
 https://doc.hassanwong.top/#/Notes/Data_Structure/C2
+https://doc.hassanwong.top/#/Notes/Data_Structure/C3

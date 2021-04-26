@@ -65,7 +65,7 @@ body {
 }
 
 .markdown-section {
-  max-width: 76%;
+  max-width: 70%;
 }
 
 /* 文档标题 */
@@ -114,6 +114,7 @@ h6 {
 }
 .markdown-section a:hover {
   text-decoration: none;
+  color: #81d8cf;
 }
 .markdown-section a:hover span {
   color: #81d8cf;
@@ -124,12 +125,15 @@ h6 {
 .markdown-section ol li,
 .markdown-section ul li,
 table {
-  font-size: 17px !important;
+  font-size: 18px !important;
 }
 .markdown-section figure,
 blockquote p {
   margin: 0;
   padding: 10px 0;
+}
+blockquote ol {
+  margin: 0;
 }
 
 /* 图片 */
@@ -184,6 +188,7 @@ aside.sidebar {
 .markdown-section a {
   text-decoration: none;
   font-weight: normal;
+  color: #7f4985;
 }
 .sidebar ul li a:hover {
   color: #81d8cf;
@@ -217,7 +222,7 @@ h1.app-name {
   text-align: center;
   backdrop-filter: saturate(160%) blur(10px);
   z-index: 10;
-  background-color: rgb(127, 73, 133, 0.2);
+  background-color: rgb(240, 177, 248, 0.2);
 }
 .app-nav ul li a {
   font-size: 18px;
@@ -263,13 +268,42 @@ h1.app-name {
   box-shadow: 0 1px 3px 0px rgba(10, 10, 10, 0.3);
 }
 
+/* 哔哩哔哩视频框架 */
+div iframe {
+  border-radius: 16px;
+}
+
+/* 引用块 */
+.markdown-section blockquote p:nth-child(n+2) {
+  margin: 0;
+  padding-top: 0;
+}
+.markdown-section blockquote p:first-child {
+  margin: 0;
+}
+
+/* 注意引用块 */
+.markdown-section p.tip, .markdown-section tr:nth-child(2n) {
+  background-color: #f0f0f0;
+  border-radius: 0 10px 10px 0;
+}
+
+/* 页脚上方分割线 */
+.markdown-section hr {
+  border-bottom: none;
+  padding: 6% 0;
+  margin: 3em 0 1em;
+  background: url(https://cdn.jsdelivr.net/gh/hassanblog/CDN/img/Bilibili_Dividing_Line.png) no-repeat;
+  background-size: 100%;
+}
+
 /* 鼠标图标 -----------------------------------------------------------------------开始 */
 body {
   cursor: url(https://cdn.jsdelivr.net/gh/hassanblog/CDN@v20210405/img/cursor.png),
     default !important;
 }
 
-/*i标签，a标签，按钮，头部的导航栏，网址卡片，底栏链接*/
+/*i标签，a标签，按钮，头部的导航栏，网址卡片，页脚链接*/
 i:hover,
 a:hover,
 button:hover,
