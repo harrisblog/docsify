@@ -65,7 +65,7 @@ body {
 }
 
 .markdown-section {
-  max-width: 70%;
+  max-width: 60%;
 }
 
 /* 文档标题 */
@@ -294,7 +294,7 @@ div iframe {
   padding: 6% 0;
   margin: 3em 0 1em;
   background: url(https://cdn.jsdelivr.net/gh/hassanblog/CDN/img/Bilibili_Dividing_Line.png) no-repeat;
-  background-size: 100%;
+  background-size: 80%;
 }
 
 /* 鼠标图标 -----------------------------------------------------------------------开始 */
