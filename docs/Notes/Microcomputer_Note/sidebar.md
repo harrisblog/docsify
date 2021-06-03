@@ -7,3 +7,5 @@
 - [第三章 指令系统](/Notes/Microcomputer_Note/C3.md)
 
 - [第四章 汇编语言程序设计](/Notes/Microcomputer_Note/C4.md)
+
+- [期末复习（附带考点）](/Notes/Microcomputer_Note/C_review.md)
