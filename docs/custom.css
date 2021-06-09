@@ -101,49 +101,101 @@ body {
 }
 
 /* 文档标题 */
-.markdown-section h1 span,
-.markdown-section h2 span,
-.markdown-section h3 span,
-.markdown-section h4 span,
-.markdown-section h5 span,
-.markdown-section h6 span {
-  font-weight: bold !important;
+h1 span {
+  font-size: 34px;
 }
-.markdown-section h1 span {
-  font-size: 36px;
-  color: var(--hassan-black);
+h2 span {
+  font-size: 30px;
 }
-.markdown-section h2 span {
-  font-size: 32px;
+h3 span {
+  font-size: 26px;
 }
-.markdown-section h3 span {
-  font-size: 28px;
-  padding: 0 0 3px 8px;
+h4 span {
+  font-size: 22px;
 }
-.markdown-section h4 span {
-  font-size: 24px;
-  padding: 0 0 3px 8px;
-}
-.markdown-section h5 span {
+h5 span {
   font-size: 20px;
-  padding: 0 0 3px 8px;
 }
-.markdown-section h6 span {
+h6 span {
   font-size: 20px;
-  color: #666;
+  color: #57728c;
 }
-h1,
+h1 {
+  margin: 0 0 1rem !important;
+}
 h2 {
-  border-bottom: solid 2px #ddd;
+  margin: 2rem 0 1rem !important;
+}
+h3 {
+  margin: 1.9rem 0 1rem !important;
 }
 h4 {
-  margin-bottom: 23px;
+  margin: 1.8rem 0 1rem !important;
+}
+h5 {
+  margin: 1.7rem 0 1rem !important;
 }
 h6 {
-  margin-bottom: 26px;
+  margin: 1.6rem 0 1rem !important;
 }
-.markdown-section a:hover {
-  text-decoration: none;
+h1,h2,h3,h4,h5,h6 {
+  transition: .3s;
+  transform: translate(0);
+}
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+  transform: translate(.6rem);
+}
+h1.app-name:hover,
+h1#诗-颂-的-文-档:hover,
+h2#docsify-4121:hover {
+  transform: translate(0);
+}
+h1:before {
+  content: 'H1';
+  margin: 0 1rem 0 0;
+  font-size: 30px;
+  color: #bfe4fb;
+}
+h2:before {
+  content: 'H2';
+  margin: 0 .9rem 0 0;
+  font-size: 26px;
+  color: #bfe4fb;
+}
+h3:before {
+  content: 'H3';
+  margin: 0 .8rem 0 0;
+  font-size: 22px;
+  color: #bfe4fb;
+}
+h4:before {
+  content: 'H4';
+  margin: 0 .7rem 0 0;
+  font-size: 20px;
+  color: #bfe4fb;
+}
+h5:before {
+  content: 'H5';
+  margin: 0 .6rem 0 0;
+  font-size: 18px;
+  color: #bfe4fb;
+}
+h6:before {
+  content: 'H6';
+  margin: 0 .6rem 0 0;
+  font-size: 18px;
+  color: #bfe4fb;
+}
+h1.app-name::before,
+h1#诗-颂-的-文-档::before,
+h2#docsify-4121:before {
+  content: '';
+  margin: 0;
 }
 
 /* 文章 */
@@ -154,6 +206,9 @@ table {
   font-size: 18px !important;
 }
 .markdown-section figure,
+.markdown-section p {
+  margin: .7em 0;
+}
 blockquote p {
   margin: 0;
   padding: 12px 0;
@@ -203,10 +258,22 @@ u {
 /* 左侧栏 */
 .sidebar ul li a {
   font-size: 16px;
+  line-height: 38px;
+  transition: .3s;
+  border-radius: 12px;
+}
+.sidebar ul li a:hover {
+  color: #505d6b;
+  background-color: var(--hassan-theme-color-light);
+  text-decoration: none;
 }
 .sidebar-nav ul li {
   font-weight: bold;
   font-size: 18px;
+  margin: 0;
+}
+.sidebar-nav > ul > li {
+  margin: 10px 0 0 0;
 }
 .sidebar ul li.active > a {
   border: none;
@@ -216,6 +283,9 @@ aside.sidebar {
 }
 .sidebar ul li.active > a {
   font-weight: normal;
+}
+.app-sub-sidebar li:before {
+  content: none;
 }
 /* 左侧栏切换 */
 .sidebar-toggle {
@@ -237,12 +307,11 @@ aside.sidebar {
   background-color: var(--hassan-black);
   color: var(--hassan-theme-color);
 }
-.sidebar ul li a:hover {
-  color: var(--hassan-theme-color);
-  text-decoration: none;
-}
 .app-nav a.active {
   border: none;
+}
+.markdown-section a:hover {
+  text-decoration: none;
 }
 
 /* 表格 --------------------------------------------------开始 */
@@ -439,22 +508,22 @@ input#txt {
   .markdown-section {
     max-width: 100%;
   }
-  .markdown-section h1 span {
-    font-size: 34px;
+  h1 span {
+    font-size: 32px;
   }
-  .markdown-section h2 span {
-    font-size: 30px;
+  h2 span {
+    font-size: 28px;
   }
-  .markdown-section h3 span {
-    font-size: 26px;
+  h3 span {
+    font-size: 24px;
   }
-  .markdown-section h4 span {
-    font-size: 22px;
+  h4 span {
+    font-size: 20px;
   }
-  .markdown-section h5 span {
+  h5 span {
     font-size: 18px;
   }
-  .markdown-section h6 span {
+  h6 span {
     font-size: 18px;
   }
   /* 文章 */
