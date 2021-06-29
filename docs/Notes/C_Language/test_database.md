@@ -363,6 +363,162 @@ void main( )
 }
 ```
 
+---
+
+题目：编写函数fun，其功能是：求Fibonacci数列中大于t的最小的数，结果由函数返回。
+
+Fibonacci数列F(n)的定义为：F(0)＝0，F(1)＝1，F(n)＝F(n－1)＋F(n－2)
+
+例如：当t＝1000时，函数值为1597。
+
+```c
+#include <math.h>
+#include <stdio.h>
+#include<stdlib.h> 
+int  fun( int  t)
+{
+/**********Program**********/
+	int i, ans, a = 0, b = 1;
+	if (t == 0) {
+		return 1;
+	} else {
+		while(1) {
+			ans = a + b;
+			a = b;
+			b = ans;
+			if (ans > t) {
+				return ans;
+			}
+		}
+	}
+/**********  End  **********/
+}
+
+main()   /* 主函数 */
+{ 
+        int  n;
+        n=1000;
+        printf("n = %d, f = %d\n",n, fun(n));
+        system("pause");
+}
+```
+
+---
+
+功能：编写函数fun求s=1^k+2^k +3^k + ......+N^k的值，（1的K次方到N的K次方的累加和）。
+
+```c
+#define K 4
+#define N 5
+#include <stdio.h>
+
+long  fun(int n,int k)
+{
+  /**********Program**********/
+	long i, j, s = 0, t, t1 = 1;
+	for (i = 0; i < n; i++) {
+		t = 1;
+		for (j = 0; j < k; j++) {
+			t *= t1;
+		}
+		s += t;
+		t1++;
+	}
+	return s;
+  /**********  End  **********/
+}
+
+main()
+{
+  long int sum;
+  printf("Sum of %d powers of integers from 1 to %d = ",K,N);
+  sum=fun(N,K);
+  printf("%ld\n",sum);
+ 
+}
+```
+
+---
+
+⭐功能：删除所有值为y的元素。数组元素中的值和y的值由主函数通过键盘输入。
+
+```c
+#include <stdio.h>
+#include<conio.h>
+#include<stdio.h>
+#define M 20
+void fun(int bb[],int *n,int y)
+{
+  /**********Program**********/
+	int i, j;
+	for (i = 0; i < *n;) {
+		if (bb[i] == y) {
+			for (j = i; j < *n; j++) {
+				bb[j] = bb[j+1];
+			}
+			*n = *n - 1; //不能*n--
+		} else {
+			i++; // 不能随意i++，否则下一个还是要删除的数，所以先再判断一下，不等于再来i++
+		}
+	}
+  /**********  End  **********/
+}
+main ()
+{
+  int aa[M],n,y,k;
+  printf("\nPlease enter n:");scanf("%d",&n);
+  printf("\nEnter %d positive number:\n",n);
+  for(k=0;k<n;k++) scanf("%d",&aa[k]);
+  printf("The original data is:\n");
+  for(k=0;k<n;k++) printf("%5d",aa[k]);
+  printf("\nEnter a number to deletede:");scanf("%d",&y);
+  fun(aa,&n,y);
+  printf("The data after deleted %d:\n",y);
+  for(k=0;k<n;k++) printf("%4d",aa[k]);
+  printf("\n");
+}
+```
+
+---
+
+函数fun的功能：将数组a中所有元素（共n个）的平均值作为函数返回值，并将大于平均值的数组元素个数，存放在形参pnum所指的存储单元中。
+
+```c
+#include <stdio.h>
+#define N 8
+float fun(float a[],int n,int *pnum)
+{
+    /**********Program**********/
+	int i, t = 0;
+	float sum = 0.0;
+	for (i = 0; i < n; i++) {
+		sum += a[i];
+	}
+	sum /= n;
+	for (i = 0; i < n; i++) {
+		if (sum < a[i]) {
+			t++;
+		}
+	}
+	*pnum = t;
+	return sum;
+    /**********  End  **********/
+}
+
+int main()
+{  
+    float a[N],aver;
+    int  i,num;
+    printf("Input %d numbers :\n",N);
+    for( i=0; i<N; i++)
+        scanf ("%f", &a[i] ) ;
+    aver=fun(a, N, &num);
+    printf( "Ave = %f\n", aver) ;
+    printf( "The number is %d\n", num);
+    return 0;
+}
+```
+
 
 
 ## 困难题
