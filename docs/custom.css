@@ -138,8 +138,13 @@ h5 {
 h6 {
   margin: 1.6rem 0 1rem !important;
 }
-h1,h2,h3,h4,h5,h6 {
-  transition: .3s;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  transition: 0.3s;
   transform: translate(0);
 }
 h1:hover,
@@ -148,7 +153,7 @@ h3:hover,
 h4:hover,
 h5:hover,
 h6:hover {
-  transform: translate(.6rem);
+  transform: translate(0.6rem);
 }
 h1.app-name:hover,
 h1#诗-颂-的-文-档:hover,
@@ -156,45 +161,45 @@ h2#docsify-4121:hover {
   transform: translate(0);
 }
 h1:before {
-  content: 'H1';
+  content: "H1";
   margin: 0 1rem 0 0;
   font-size: 30px;
   color: #bfe4fb;
 }
 h2:before {
-  content: 'H2';
-  margin: 0 .9rem 0 0;
+  content: "H2";
+  margin: 0 0.9rem 0 0;
   font-size: 26px;
   color: #bfe4fb;
 }
 h3:before {
-  content: 'H3';
-  margin: 0 .8rem 0 0;
+  content: "H3";
+  margin: 0 0.8rem 0 0;
   font-size: 22px;
   color: #bfe4fb;
 }
 h4:before {
-  content: 'H4';
-  margin: 0 .7rem 0 0;
+  content: "H4";
+  margin: 0 0.7rem 0 0;
   font-size: 20px;
   color: #bfe4fb;
 }
 h5:before {
-  content: 'H5';
-  margin: 0 .6rem 0 0;
+  content: "H5";
+  margin: 0 0.6rem 0 0;
   font-size: 18px;
   color: #bfe4fb;
 }
 h6:before {
-  content: 'H6';
-  margin: 0 .6rem 0 0;
+  content: "H6";
+  margin: 0 0.6rem 0 0;
   font-size: 18px;
   color: #bfe4fb;
 }
 h1.app-name::before,
 h1#诗-颂-的-文-档::before,
 h2#docsify-4121:before {
-  content: '';
+  content: "";
   margin: 0;
 }
 
@@ -207,7 +212,7 @@ table {
 }
 .markdown-section figure,
 .markdown-section p {
-  margin: .7em 0;
+  margin: 0.7em 0;
 }
 blockquote p {
   margin: 0;
@@ -259,7 +264,7 @@ u {
 .sidebar ul li a {
   font-size: 16px;
   line-height: 38px;
-  transition: .3s;
+  transition: 0.3s;
   border-radius: 12px;
   padding: 0 6px;
   margin-right: 6px;
@@ -474,15 +479,14 @@ div iframe {
   border-bottom: none;
   padding: 6% 0;
   margin: 3em 0 1em;
-  background: url(https://cdn.jsdelivr.net/gh/hassanblog/CDN/img/Bilibili_Dividing_Line.png)
+  background: url(https://unpkg.zhimg.com/hassan-assets/img/Bilibili_Dividing_Line.png)
     no-repeat;
   background-size: 80%;
 }
 
 /* 鼠标图标 -----------------------------------------------------------------------开始 */
 body {
-  cursor: url(https://cdn.jsdelivr.net/gh/hassanblog/CDN@v20210405/img/cursor.png),
-    default !important;
+  cursor: url(https://unpkg.zhimg.com/hassan-assets/img/cursor.png), default !important;
 }
 
 /*i标签，a标签，按钮，头部的导航栏，网址卡片，页脚链接*/
@@ -491,7 +495,7 @@ a:hover,
 button:hover,
 #nav .site-page:hover,
 .xe-widget.xe-conversations.box2.label-info {
-  cursor: url(https://cdn.jsdelivr.net/gh/hassanblog/CDN@v20210405/img/cursor_puppy.png),
+  cursor: url(https://unpkg.zhimg.com/hassan-assets/img/cursor_puppy.png),
     pointer !important;
 }
 
@@ -499,7 +503,7 @@ button:hover,
 #footer-wrap a:hover,
 #pagination .page-number:hover,
 input#txt {
-  cursor: url(https://cdn.jsdelivr.net/gh/hassanblog/CDN@v20210405/img/cursor_stitch.png),
+  cursor: url(https://unpkg.zhimg.com/hassan-assets/img/cursor_stitch.png),
     pointer !important;
 }
 /* 鼠标图标 -----------------------------------------------------------------------结束 */
