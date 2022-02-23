@@ -479,14 +479,14 @@ div iframe {
   border-bottom: none;
   padding: 6% 0;
   margin: 3em 0 1em;
-  background: url(https://unpkg.zhimg.com/hassan-assets/img/Bilibili_Dividing_Line.png)
+  background: url(https://npm.elemecdn.com/hassan-assets/img/Bilibili_Dividing_Line.png)
     no-repeat;
   background-size: 80%;
 }
 
 /* 鼠标图标 -----------------------------------------------------------------------开始 */
 body {
-  cursor: url(https://unpkg.zhimg.com/hassan-assets/img/cursor.png), default !important;
+  cursor: url(https://npm.elemecdn.com/hassan-assets/img/cursor.png), default !important;
 }
 
 /*i标签，a标签，按钮，头部的导航栏，网址卡片，页脚链接*/
@@ -495,7 +495,7 @@ a:hover,
 button:hover,
 #nav .site-page:hover,
 .xe-widget.xe-conversations.box2.label-info {
-  cursor: url(https://unpkg.zhimg.com/hassan-assets/img/cursor_puppy.png),
+  cursor: url(https://npm.elemecdn.com/hassan-assets/img/cursor_puppy.png),
     pointer !important;
 }
 
@@ -503,7 +503,7 @@ button:hover,
 #footer-wrap a:hover,
 #pagination .page-number:hover,
 input#txt {
-  cursor: url(https://unpkg.zhimg.com/hassan-assets/img/cursor_stitch.png),
+  cursor: url(https://npm.elemecdn.com/hassan-assets/img/cursor_stitch.png),
     pointer !important;
 }
 /* 鼠标图标 -----------------------------------------------------------------------结束 */

@@ -49,7 +49,7 @@
 
 #### 芯片个数计算
 
-![](https://unpkg.zhimg.com/hassan-assets/posts/Microcomputer_Note/image-20210530095918496.png)
+![](https://npm.elemecdn.com/hassan-assets/posts/Microcomputer_Note/image-20210530095918496.png)
 
 > 其中，M=2^地址线个数^，8/N=每组芯片个数
 
@@ -59,19 +59,19 @@
 
 **地址范围**：
 
-![](https://unpkg.zhimg.com/hassan-assets/posts/Microcomputer_Note/image-20210530102820332.png)
+![](https://npm.elemecdn.com/hassan-assets/posts/Microcomputer_Note/image-20210530102820332.png)
 
 > 片外地址是没有用上的 A15~19
 
-![](https://unpkg.zhimg.com/hassan-assets/posts/Microcomputer_Note/image-20210530110327029.png)
+![](https://npm.elemecdn.com/hassan-assets/posts/Microcomputer_Note/image-20210530110327029.png)
 
 > 计算第 1 片 6116 芯片地址范围时，与 CE 相连的地址线为<u>0</u>，第 2、3、4 个以此类推
 
-![](https://unpkg.zhimg.com/hassan-assets/posts/Microcomputer_Note/image-20210530110525888.png)
+![](https://npm.elemecdn.com/hassan-assets/posts/Microcomputer_Note/image-20210530110525888.png)
 
-![](https://unpkg.zhimg.com/hassan-assets/posts/Microcomputer_Note/image-20210530110632336.png)
+![](https://npm.elemecdn.com/hassan-assets/posts/Microcomputer_Note/image-20210530110632336.png)
 
-![](https://unpkg.zhimg.com/hassan-assets/posts/Microcomputer_Note/image-20210530110648978.png)
+![](https://npm.elemecdn.com/hassan-assets/posts/Microcomputer_Note/image-20210530110648978.png)
 
 #### 部分译码法
 
@@ -85,29 +85,29 @@
 
 **公式**：2^地址线 A 个数^ ✖ 芯片个数（也就是上面求芯片个数的 M✖N）
 
-![](https://unpkg.zhimg.com/hassan-assets/posts/Microcomputer_Note/image-20210530143254640.png)
+![](https://npm.elemecdn.com/hassan-assets/posts/Microcomputer_Note/image-20210530143254640.png)
 
-![](https://unpkg.zhimg.com/hassan-assets/posts/Microcomputer_Note/image-20210530145715141.png)
+![](https://npm.elemecdn.com/hassan-assets/posts/Microcomputer_Note/image-20210530145715141.png)
 
 > A15~A19 使用了，所以选择 1。没使用则取任意值，据规定全选 0。
 >
 > 总结，有则 1，无则 0
 
-![](https://unpkg.zhimg.com/hassan-assets/posts/Microcomputer_Note/image-20210530145742982.png)
+![](https://npm.elemecdn.com/hassan-assets/posts/Microcomputer_Note/image-20210530145742982.png)
 
 #### 奇偶存储体地址范围
 
-![](https://unpkg.zhimg.com/hassan-assets/posts/Microcomputer_Note/image-20210530151205455.png)
+![](https://npm.elemecdn.com/hassan-assets/posts/Microcomputer_Note/image-20210530151205455.png)
 
 > 注意此处上下对应的是 M0
 
-![](https://unpkg.zhimg.com/hassan-assets/posts/Microcomputer_Note/image-20210530151228173.png)
+![](https://npm.elemecdn.com/hassan-assets/posts/Microcomputer_Note/image-20210530151228173.png)
 
-![](https://unpkg.zhimg.com/hassan-assets/posts/Microcomputer_Note/image-20210530151646403.png)
+![](https://npm.elemecdn.com/hassan-assets/posts/Microcomputer_Note/image-20210530151646403.png)
 
 !> 注意此处偶数末尾是 0，奇数是 1
 
-![](https://unpkg.zhimg.com/hassan-assets/posts/Microcomputer_Note/image-20210530153439156.png)
+![](https://npm.elemecdn.com/hassan-assets/posts/Microcomputer_Note/image-20210530153439156.png)
 
 #### 多少根地址线
 
@@ -223,7 +223,7 @@ BCD 码的调整指令，压缩 BCD 调整，DAA，DAS，就两条
 8255，只考方式 0，
 8253，考的非常简单，只考初始化
 
-![8086 微处理器内部寄存器](https://unpkg.zhimg.com/hassan-assets/posts/Microcomputer_Note/image-20210323171354067.png)
+![8086 微处理器内部寄存器](https://npm.elemecdn.com/hassan-assets/posts/Microcomputer_Note/image-20210323171354067.png)
 
 | 状态标志                                        | 含义                                                                                                                                                             | 判断                                                                      |
 | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |

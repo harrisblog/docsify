@@ -75,9 +75,9 @@
 
 2. 图的数据表示法
 
-![](https://unpkg.zhimg.com/hassan-assets/posts/DataStructure_Note/image-20210609213951474.png)![邻接矩阵法](https://unpkg.zhimg.com/hassan-assets/posts/DataStructure_Note/image-20210609214131279.png)
+![](https://npm.elemecdn.com/hassan-assets/posts/DataStructure_Note/image-20210609213951474.png)![邻接矩阵法](https://npm.elemecdn.com/hassan-assets/posts/DataStructure_Note/image-20210609214131279.png)
 
-![邻接表法（0连1和2，答案错了）](https://unpkg.zhimg.com/hassan-assets/posts/DataStructure_Note/image-20210609214451740.png)
+![邻接表法（0连1和2，答案错了）](https://npm.elemecdn.com/hassan-assets/posts/DataStructure_Note/image-20210609214451740.png)
 
 3. 图的生成最小树的方法：先把所有线去掉，然后找到之前最短的线（线值最小的线），连接两点，依次顺着找下一条最短的线，以此类推。
 

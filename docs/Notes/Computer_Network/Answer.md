@@ -120,9 +120,9 @@ D：（－1 ＋ 1－1－1－1－1 ＋ 1－1）
 
 (2)和(5)是 A 类,(1)和(3)是 B 类,(4)和(6)是 C 类.
 
-![](https://unpkg.zhimg.com/hassan-assets/posts/Computer_Network/image-20210616130246332.png)
+![](https://npm.elemecdn.com/hassan-assets/posts/Computer_Network/image-20210616130246332.png)
 
-![](https://unpkg.zhimg.com/hassan-assets/posts/Computer_Network/image-20210616130333683.png)
+![](https://npm.elemecdn.com/hassan-assets/posts/Computer_Network/image-20210616130333683.png)
 
 26.有如下的 4 个/24 地址块，试进行最大可能性的聚会。
 
@@ -142,8 +142,8 @@ D：（－1 ＋ 1－1－1－1－1 ＋ 1－1）
 
 所以共同的前缀有 22 位，即 11010100 00111000 100001，聚合的 CIDR 地址块是： 212.56.132.0/22
 
-![](https://unpkg.zhimg.com/hassan-assets/posts/Computer_Network/image-20210616130609091.png)
-![](https://unpkg.zhimg.com/hassan-assets/posts/Computer_Network/image-20210616130700388.png)
+![](https://npm.elemecdn.com/hassan-assets/posts/Computer_Network/image-20210616130609091.png)
+![](https://npm.elemecdn.com/hassan-assets/posts/Computer_Network/image-20210616130700388.png)
 
 4-30 一个大公司有一个总部和三个下属部门。公司分配到的网络前缀是 192.77.33/24.公司的网络布局如图 4-56 示。总部共有五个局域网，其中的 LAN1-LAN4 都连接到路由器 R1 上，R1 再通过 LAN5 与路由器 R5 相连。R5 和远地的三个部门的局域网 LAN6 ～ LAN8 通过广域网相连。每一个局域网旁边标明的数字是局域网上的主机数。试给每一个局域网分配一个合适的网络的前缀。见课后答案 P380
 
@@ -194,9 +194,9 @@ D：（－1 ＋ 1－1－1－1－1 ＋ 1－1）
 
 ​ 最大地址：136.23.12.01111110 ＝ 136.23.12.126/28
 
-![](https://unpkg.zhimg.com/hassan-assets/posts/Computer_Network/image-20210616113231075.png)
+![](https://npm.elemecdn.com/hassan-assets/posts/Computer_Network/image-20210616113231075.png)
 
-![](https://unpkg.zhimg.com/hassan-assets/posts/Computer_Network/image-20210616113459111.png)
+![](https://npm.elemecdn.com/hassan-assets/posts/Computer_Network/image-20210616113459111.png)
 
 ## 第五章 传输层
 
@@ -253,7 +253,7 @@ Efficiency=(L/C)//(L/C+2×D)=0.0255
 
 5—39 TCP 的拥塞窗口 cwnd 大小与传输轮次 n 的关系如下所示：
 
-![](https://unpkg.zhimg.com/hassan-assets/posts/Computer_Network/image-20210616124928843.png)
+![](https://npm.elemecdn.com/hassan-assets/posts/Computer_Network/image-20210616124928843.png)
 
 （1）试画出如图 5-25 所示的拥塞窗口与传输轮次的关系曲线。
 
