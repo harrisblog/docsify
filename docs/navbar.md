@@ -1,5 +1,5 @@
 - [📃 文档首页](/README)
-- [🍁 我的博客](https://hassanwong.top)
-- [🚀 网址导航](https://navi.hassanwong.top)
-- [✉ 留言信枫](https://hassanwong.top/comments)
+- [🍁 我的博客](https://blog.harriswong.top)
+- [🚀 网址导航](https://navi.harriswong.top)
+- [✉ 留言信枫](https://blog.harriswong.top/comments)
 - [🦄 项目源码](https://github.com/hassanblog/docsify/)

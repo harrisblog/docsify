@@ -1,151 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>诗颂的文档</title>
+    <link
+      rel="icon"
+      href="https://npm.elemecdn.com/hassan-assets/img/favicon.png"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="keywords"
+      content="诗颂的文档,doc,docs,documentation,gitbook,creator,generator,github,jekyll,github-pages,hassan's blog,harriswong"
+    />
+    <meta name="description" content="A magical documentation generator." />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="//npm.elemecdn.com/docsify@4/lib/themes/vue.css"
+    />
+    <!-- mermaid -->
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css"
+    />
+    <!-- Font Awesome Free 5.15.2 -->
+    <link
+      href="https://npm.elemecdn.com/@fortawesome/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- 自定义 -->
+    <link href="/custom.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>诗颂的文档</title>
-  <link rel="icon" href="https://npm.elemecdn.com/hassan-assets/img/favicon.png" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="keywords"
-    content="诗颂的文档,doc,docs,documentation,gitbook,creator,generator,github,jekyll,github-pages,hassan's blog,hassanwong" />
-  <meta name="description" content="A magical documentation generator." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//npm.elemecdn.com/docsify@4/lib/themes/vue.css">
-  <!-- mermaid -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
-  <!-- Font Awesome Free 5.15.2 -->
-  <link href="https://npm.elemecdn.com/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <!-- 自定义 -->
-  <link href="/custom.css" rel="stylesheet">
-</head>
+  <body>
+    <div id="app"></div>
+    <script>
+      window.$docsify = {
+        // 左上角文档标题
+        name: "诗颂的文档",
+        nameLink: "/",
 
-<body>
-  <div id="app"></div>
-  <script>
-    window.$docsify = {
-      // 左上角文档标题
-      name: '诗颂的文档',
-      nameLink: '/',
+        // alias: {
+        //   '/.*/sidebar.md': '/sidebar.md'
+        // },
+        maxLevel: 4,
 
-      // alias: {
-      //   '/.*/sidebar.md': '/sidebar.md'
-      // },
-      maxLevel: 4,
+        // 导航
+        loadNavbar: true,
+        loadNavbar: "navbar.md",
 
-      // 导航
-      loadNavbar: true,
-      loadNavbar: 'navbar.md',
+        // 侧边栏
+        loadSidebar: true,
+        loadSidebar: "sidebar.md",
 
-      // 侧边栏
-      loadSidebar: true,
-      loadSidebar: 'sidebar.md',
+        autoHeader: true,
 
-      autoHeader: true,
+        // 切换新页面自动跳转到页面顶部
+        auto2top: true,
 
-      // 切换新页面自动跳转到页面顶部
-      auto2top: true,
+        // 侧边栏生成目录的层级
+        subMaxLevel: 4,
 
-      // 侧边栏生成目录的层级
-      subMaxLevel: 4,
+        // 外部链接是否打开新页面
+        externalLinkTarget: "_blank",
 
-      // 外部链接是否打开新页面
-      externalLinkTarget: '_blank',
+        // 启用相对路径
+        relativePath: true,
 
-      // 启用相对路径
-      relativePath: true,
+        // 封面
+        coverpage: true,
+        coverpage: "coverpage.md",
+        onlyCover: false,
 
-      // 封面
-      coverpage: true,
-      coverpage: 'coverpage.md',
-      onlyCover: false,
+        // 主题色
+        themeColor: "#81D8CF",
 
-      // 主题色
-      themeColor: '#81D8CF',
+        logo: "/media/Logo.png",
 
-      logo: '/media/Logo.png',
+        // 小屏设备下合并导航栏到侧边栏。
+        mergeNavbar: true,
 
+        // 在找不到指定页面时加载404.md
+        notFoundPage: true,
+        // 加载自定义404页面
+        notFoundPage: "404.md",
+        topMargin: 90, // default: 0
 
-      // 小屏设备下合并导航栏到侧边栏。
-      mergeNavbar: true,
-
-      // 在找不到指定页面时加载404.md
-      notFoundPage: true,
-      // 加载自定义404页面
-      notFoundPage: '404.md',
-      topMargin: 90, // default: 0
-
-      //全文搜索
-      search: {
-        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
-        paths: 'auto',
-        placeholder: '搜索',
-        noData: '找不到结果',
-        // 搜索标题的最大程级, 1 - 6
-        depth: 6,
-      },
-
-      // 字数统计
-      count: {
-        countable: true,
-        fontsize: '16px',
-        color: 'rgb(90,90,90)',
-        language: 'chinese'
-      },
-
-      // footer | GitHub在线编辑
-      plugins: [
-        function (hook, vm) {
-          hook.beforeEach(function (html) {
-            if (/githubusercontent\.com/.test(vm.route.file)) {
-              url = vm.route.file
-                .replace('raw.githubusercontent.com', 'github.com')
-                .replace(/\/master/, '/blob/master');
-            } else if (/jsdelivr\.net/.test(vm.route.file)) {
-              url = vm.route.file
-                .replace('cdn.jsdelivr.net/gh', 'github.com')
-                .replace('@master', '/blob/master');
-            } else {
-              url =
-                'https://github.com/hassanblog/docsify/blob/main/docs/' +
-                vm.route.file;
-            }
-            var editHtml = '[📝 在线编辑此文档](' + url + ')\n\n';
-            return (
-              editHtml +
-              html +
-              '\n\n----\n\n' +
-              'Powered by <a href="https://docsify.js.org" target="_blank">docsify</a> | Beautified By <a href="https://hassanwong.top" target="_blank">HassanWong</a> | Since 2021'
-            );
-          })
+        //全文搜索
+        search: {
+          maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+          paths: "auto",
+          placeholder: "搜索",
+          noData: "找不到结果",
+          // 搜索标题的最大程级, 1 - 6
+          depth: 6,
         },
-      ],
-    }
-  </script>
 
-  <!-- Docsify v4 -->
-  <script src="//npm.elemecdn.com/docsify@4"></script>
-  <!-- 全文搜索 - IE11 旧版浏览器忽略双音符 -->
-  <script src="//polyfill.io/v3/polyfill.min.js?features=String.prototype.normalize"></script>
-  <!-- 图片缩放 - Zoom image -->
-  <script src="//npm.elemecdn.com/docsify/lib/plugins/zoom-image.min.js"></script>
-  <!-- 复制到剪贴板 -->
-  <script src="//npm.elemecdn.com/docsify-copy-code"></script>
-  <!-- 字数统计 -->
-  <script src="//npm.elemecdn.com/docsify-count/dist/countable.js"></script>
-  <!-- 全文搜索 -->
-  <script src="//npm.elemecdn.com/docsify/lib/plugins/search.min.js"></script>
-  <!-- 丝滑滚动 -->
-  <script defer src="https://cdn.jsdelivr.net/gh/hassanblog/hassanblog.github.io/js/custom/smooth.js"></script>
-  <!-- 代码块高亮 -->
-  <script src="//npm.elemecdn.com/prismjs@1/components/prism-bash.min.js"></script>
-  <script src="//npm.elemecdn.com/prismjs@1.23.0/components/prism-python.min.js"></script>
-  <script src="//npm.elemecdn.com/prismjs@1.23.0/components/prism-java.min.js"></script>
-  <script src="//npm.elemecdn.com/prismjs@1.23.0/components/prism-cpp.min.js"></script>
-  <script src="//npm.elemecdn.com/prismjs@1.23.0/components/prism-sql.min.js"></script>
-  <!-- 在GitHub上编辑 -->
-  <script src="//npm.elemecdn.com/docsify-edit-on-github"></script>
-  <!-- 自定义 -->
-  <script defer src="/custom.js"></script>
-</body>
+        // 字数统计
+        count: {
+          countable: true,
+          fontsize: "16px",
+          color: "rgb(90,90,90)",
+          language: "chinese",
+        },
 
+        // footer | GitHub在线编辑
+        plugins: [
+          function (hook, vm) {
+            hook.beforeEach(function (html) {
+              if (/githubusercontent\.com/.test(vm.route.file)) {
+                url = vm.route.file
+                  .replace("raw.githubusercontent.com", "github.com")
+                  .replace(/\/master/, "/blob/master");
+              } else if (/jsdelivr\.net/.test(vm.route.file)) {
+                url = vm.route.file
+                  .replace("cdn.jsdelivr.net/gh", "github.com")
+                  .replace("@master", "/blob/master");
+              } else {
+                url =
+                  "https://github.com/hassanblog/docsify/blob/main/docs/" +
+                  vm.route.file;
+              }
+              var editHtml = "[📝 在线编辑此文档](" + url + ")\n\n";
+              return (
+                editHtml +
+                html +
+                "\n\n----\n\n" +
+                'Powered by <a href="https://docsify.js.org" target="_blank">docsify</a> | Beautified By <a href="https://blog.harriswong.top" target="_blank">HarrisWong</a> | Since 2021'
+              );
+            });
+          },
+        ],
+      };
+    </script>
+
+    <!-- Docsify v4 -->
+    <script src="//npm.elemecdn.com/docsify@4"></script>
+    <!-- 全文搜索 - IE11 旧版浏览器忽略双音符 -->
+    <script src="//polyfill.io/v3/polyfill.min.js?features=String.prototype.normalize"></script>
+    <!-- 图片缩放 - Zoom image -->
+    <script src="//npm.elemecdn.com/docsify/lib/plugins/zoom-image.min.js"></script>
+    <!-- 复制到剪贴板 -->
+    <script src="//npm.elemecdn.com/docsify-copy-code"></script>
+    <!-- 字数统计 -->
+    <script src="//npm.elemecdn.com/docsify-count/dist/countable.js"></script>
+    <!-- 全文搜索 -->
+    <script src="//npm.elemecdn.com/docsify/lib/plugins/search.min.js"></script>
+    <!-- 丝滑滚动 -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/gh/hassanblog/hassanblog.github.io/js/custom/smooth.js"
+    ></script>
+    <!-- 代码块高亮 -->
+    <script src="//npm.elemecdn.com/prismjs@1/components/prism-bash.min.js"></script>
+    <script src="//npm.elemecdn.com/prismjs@1.23.0/components/prism-python.min.js"></script>
+    <script src="//npm.elemecdn.com/prismjs@1.23.0/components/prism-java.min.js"></script>
+    <script src="//npm.elemecdn.com/prismjs@1.23.0/components/prism-cpp.min.js"></script>
+    <script src="//npm.elemecdn.com/prismjs@1.23.0/components/prism-sql.min.js"></script>
+    <!-- 在GitHub上编辑 -->
+    <script src="//npm.elemecdn.com/docsify-edit-on-github"></script>
+    <!-- 自定义 -->
+    <script defer src="/custom.js"></script>
+  </body>
 </html>
