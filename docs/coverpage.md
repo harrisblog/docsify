@@ -10,7 +10,7 @@
 
 <br>
 
-[GitHub](https://github.com/hassanblog/docsify/) [Get Started!](/README)
+[GitHub](https://github.com/harrisblog/docsify/) [Get Started!](/README)
 
 <!-- 背景图片 -->
 
